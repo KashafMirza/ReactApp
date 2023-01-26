@@ -4,12 +4,12 @@ import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-import About from './components/About';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+// import About from './components/About';
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route
+// } from "react-router-dom";
 
 
 
@@ -47,23 +47,21 @@ function App() {
 
   return (
     <>
-     {/* <Navbar title="My App" aboutText="About Us"/> */}
-     {/* <Navbar/>   for default prorp */}
-     <Router>
-     <Navbar title="My App" mode={mode} toggleMode={toggleMode} />
+      {/* <Router> */}
+     <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
      {/* state var alert is pass to alert */}
-     <Alert alert={alert}/>
+     <Alert alert={alert}/> 
       <div className="container my-3">
-      <Switch>
-          <Route exact path="/about">
-            <About/>
-          </Route>
-          <Route exact path="/">
-          <TextForm showAlert={showAlert} heading="Convert Text To Upper and Lower Case:" mode={mode} />
-          </Route>
-      </Switch>    
+      {/* <Switch> */}
+          {/* <Route exact path="/about"> */}
+            {/* <About  mode={mode} /> */}
+          {/* </Route>  */}
+          {/* <Route exact path="/"> */}
+          <TextForm showAlert={showAlert} heading="Try TextUtils - Word Counter,Character Counter,Remove extra spaces" mode={mode} />
+          {/* </Route> */}
+       {/* </Switch>     */}
      </div> 
-     </Router>
+     {/* </Router> */}
     </>
   );
 }
